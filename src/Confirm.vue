@@ -1,5 +1,5 @@
 <template>
-  <v-dialog eager @input="change" value="true" :max-width="width" :persistent="persistent" @keydown.esc="choose(false)">
+  <v-dialog eager @input="change" value="true" :max-width="width" :persistent="persistent" @keydown.enter="choose(true)" @keydown.esc="choose(false)">
     <v-toolbar v-if="Boolean(title)" dark :color="color" dense>
       <v-icon v-if="Boolean(icon)">{{ icon }}</v-icon>
       <v-toolbar-title class="white--text" v-text="title"/>
